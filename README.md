@@ -19,7 +19,8 @@ var success = require('success')
 function doStuff( err, callback ) {
 
   doMoreStuff( success(callback, function(result) {
-    console.log( result )
+
+    handleResult( result )
   }))  
 }
 ```
@@ -34,7 +35,7 @@ function doStuff( err, callback ) {
   doMoreStuff( function( err, result ) {
     if( err ) return callback(err);
 
-    console.log( result )
+    handleResult( result )
   })
 }
 ```
@@ -44,9 +45,9 @@ print the error (if it occurs) to standard output.
 
 ```JavaScript
   doMoreStuff( success(function(result) {
-    console.log( result )
+
+    handleResult( result )
   }))  
-}
 ```
 
 
