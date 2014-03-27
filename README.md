@@ -35,7 +35,7 @@ function doStuff( err, callback ) {
     if( err ) return callback(err);
 
     console.log( result )
-  }))  
+  })
 }
 ```
 
